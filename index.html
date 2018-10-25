@@ -26,7 +26,6 @@
 </head>
 
 <body id="page-top">
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Paulo Corazza</span>
@@ -63,7 +62,7 @@
           <a class="nav-link js-scroll-trigger" href="#interests">Interesses</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projetos em que fiz/faço parte</a>
+          <a class="nav-link js-scroll-trigger" href="#projects">Portfólio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#apps">Meus Aplicativos</a>
@@ -150,8 +149,8 @@
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Programador Júnior</h3>
             <div class="subheading mb-3"><a href="https://innovareti.com.br/">InnovareTI - Soluções Inovadoras</a></div>
-            <p>Na Innovare atuei desenvolvendo soluções para os nossos clientes utilizando as mais modernas ferramentas
-              e métodos de desenvolvimento, proporciando a transformação digital nas companhias.</p>
+            <p>Na Innovare atuei desenvolvendo soluções para os nossos clientes utilizando HTML, CSS e JS, utilizei
+              também vue.js como framework para frontend</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">Março de 2018 - Outubro de 2018</span>
@@ -358,12 +357,12 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
       <div class="my-auto">
-        <h2 class="mb-5">Projetos em que fiz/faço parte</h2>
+        <h2 class="mb-5">Portfólio</h2>
         <p>Além de ser programador na Innovare, contribuo com alguns projetos pesoais ou em grupos</p>
       </div>
       <div class="row">
         <div class="col-sm-6">
-          <div class="card text-center" style="width: 18rem;background-color: #132645;color: white;">
+          <div class="card text-center" style="width: 20rem;background-color: #132645;color: white;">
             <img class="card-img-top" src="./img/logo.png" alt="Card image cap">
             <div class="card-body pgbr">
               <p class="card-text">Proporcionar para comunidade de TI um espaço de compartilhamento de conhecimento,
@@ -374,6 +373,78 @@
             </div>
           </div>
         </div>
+        <div id="app">
+          <div>
+            <div class="col-sm-6">
+              <div class="card text-center" style="width:18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">A magia do Vue.js</h5>
+                  <p class="card-text">Um Contador usando vue.js para contabilizar os pontos de vida durante uma
+                    partida de Magic:The gathering</p>
+                  <button class="btn btn-primary" @click="showModal()">Usar o Contador!</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title text-center" id="modalH5">Contador de Vida</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row form-group">
+
+                      <div class="col-md-12">
+                        <p>Numa partida de Magic de gathering, os jogadores começam com 20 pontos de vida, e perde quem
+                          chegar a 0 primeiro ou quando um jogador não tiver mais cartas para comprar.</p>
+                        <h4 for="player1">Digite abaixo o nome dos 2 jogadores:</h4>
+                        <input type="text" class="form-control" v-model="player1">
+                        <br>
+                        <input type="text" class="form-control" v-model="player2">
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-6">
+                        <h3 class="text-center">{{ player1 }}</h3>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-danger text-center" @click="reduceCounter1()">-</button>
+                      </div>
+                      <div class="col-md-2">
+                        <h3>{{ lifePlayer1 }}</h3>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-primary text-center" @click="addCounter1()">+</button>
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-6">
+                        <h3 class="text-center">{{ player2 }}</h3>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-danger text-center" @click="reduceCounter2()">-</button>
+                      </div>
+                      <div class="col-md-2">
+                        <h3>{{ lifePlayer2 }}</h3>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-primary text-center" @click="addCounter2()">+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <p>Conheça também a versāo para android clicando <a href="https://play.google.com/store/apps/details?id=com.magecounter.paulocorazza.magecounter">aqui !</a>
+                    </p>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
       <br>
 
@@ -451,8 +522,14 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
 
   <script>
     function helloWorld() {
@@ -463,16 +540,89 @@
       alert("Olá eu sou o " + name + " e  sou um " + job);
 
     }
+  </script>
+  <script>
+    const app = new Vue({
+      el: '#app',
 
-    // function showPhoto(){
-    //   $('#photo').modal('toggle');
-    // }
+      data: {
+
+
+
+        player1: '',
+        player2: '',
+        lifePlayer1: 20,
+        lifePlayer2: 20
+
+
+
+      },
+
+      methods: {
+
+        reduceCounter1() {
+
+          this.lifePlayer1--
+
+          if (this.lifePlayer1 == 0) {
+
+            alert('O' +  this.player1 + "perdeu !");
+
+          }
+
+        },
+
+        addCounter1() {
+
+          this.lifePlayer1++
+
+        },
+        reduceCounter2() {
+
+          this.lifePlayer2--
+
+          if (this.lifePlayer2 == 0) {
+
+            alert('O' +  this.player2 + "perdeu !");
+          }
+
+
+
+        },
+
+        addCounter2() {
+
+          this.lifePlayer2++
+
+        },
+
+        reset() {
+          this.lifePlayer1 = 20;
+          this.lifePlayer2 = 20
+        },
+
+        showModal() {
+          $('#modal').modal('show');
+        }
+
+      },
+      computed: {
+
+        isEvenNumber() {
+          return this.count % 2 === 0
+        }
+      },
+      mounted: function () {
+        // this.showModal();
+      }
+    })
   </script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/vue.js"></script>
+
 
   <!-- Custom scripts for this template -->
+
   <script src="js/resume.min.js"></script>
 </body>
 
