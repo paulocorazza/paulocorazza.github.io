@@ -397,7 +397,7 @@
             Besides being a programmer, I contribute with some personal projects or in groups</p>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <div class="card text-center" style="width: 20rem;background-color: #132645;color: white;">
             <img class="card-img-top" src="./img/logo.png" alt="Card image cap">
             <div class="card-body pgbr">
@@ -411,12 +411,12 @@
         </div>
         <div id="app">
           <div>
-            <div class="col-sm-6">
-              <div class="card text-center" style="width:18rem;">
+            <div class="col-md-6">
+              <div class="card text-center" style="width:18rem;background-color: #42b883; color: white;">
                 <div class="card-body">
                   <h5 class="card-title">The Magic of Vue.js</h5>
                   <p class="card-text">A counter to count lifepoints during a magic:The gathering match using vue.js</p>
-                  <button class="btn btn-primary" @click="showModal()">Use the Counter!</button>
+                  <button class="btn btn-warning" @click="showModal()">Use the Counter!</button>
                 </div>
               </div>
             </div>
@@ -560,11 +560,11 @@
           <form action="https://formspree.io/corazza.paulovinicius@gmail.com" method="POST"  id="contactForm">
             <div class="row">
                 <div class="col-md-4">
-                  <h5><label for="name"> Name</label></h5>
+                  <h5><label for="name"><span class="required">*</span> Name</label></h5>
                   <input type="text" name="name" class="form-control" placeholder="Type your name" id="name" required>
                 </div>
                 <div class="col-md-4">
-                    <h5><label>Email</label></h5>
+                    <h5><label><span class="required">*</span> Email</label></h5>
                     <input type="email" class="form-control" required name="email" placeholder="myname@myemailprovider.com">
                 </div>
                 <div class="col-md-4">
@@ -575,7 +575,7 @@
             <br>
             <div class="row">
               <div class="col-md-12">
-                <h5><label for="message">Type below your message</label> </h5>
+                <h5><label for="message"><span class="required">*</span> Type below your message</label> </h5>
                 <textarea class="form-control" name="message" required rows="5"></textarea>
               </div>
             </div>
@@ -600,13 +600,11 @@
   </section>
   </div>
 
-  <!-- Bootstrap core JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
+  <script src="vendor/jquery-validation-1.17.0/dist/jquery.validate.js"></script>
   <script src="js/resume.min.js"></script>
 
 
@@ -696,6 +694,11 @@
       }
     })
   </script>
+
+<script>
+  $("#contactForm").validate();
+
+</script>
 
 
 
