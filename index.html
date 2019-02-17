@@ -46,6 +46,9 @@
           <a class="nav-link js-scroll-trigger" href="#about">Sobre Mim</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="./blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#experience">Experiência</a>
         </li>
         <li class="nav-item">
@@ -143,8 +146,8 @@
           <li class="list-inline-item">
             <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511972813500">
               <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
               </span>
             </a>
           </li>
@@ -384,93 +387,135 @@
         <h2 class="mb-5">Portfólio</h2>
         <p>Além de ser programador, contribuo com alguns projetos pesoais ou em grupos</p>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card text-center" style="width: 20rem;background-color: #132645;color: white;">
-            <img class="card-img-top" src="./img/logo.png" alt="Card image cap">
-            <div class="card-body pgbr">
-              <p class="card-text">Proporcionar para comunidade de TI um espaço de compartilhamento de conhecimento,
-                experiencias e
-                aprendizado.
-              </p>
-              <a href="http://www.programadoresbr.com.br" class="btn btn-primary">ProgramadoresBR</a>
-            </div>
-          </div>
-        </div>
-        <div id="app">
-          <div>
-            <div class="col-md-6">
-              <div class="card text-center" style="width:20rem; background-color: #42b883; color: white;">
-                <div class="card-body">
-                  <h5 class="card-title">A magia do Vue.js</h5>
-                  <p class="card-text">Um Contador usando vue.js para contabilizar os pontos de vida durante uma
-                    partida de Magic:The gathering</p>
-                  <button class="btn btn-warning" @click="showModal()">Usar o Contador!</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="modal" id="modal" tabindex="-1" role="dialog">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title text-center" id="modalH5">Contador de Vida</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row form-group">
-
-                      <div class="col-md-12">
-                        <p>Numa partida de Magic de gathering, os jogadores começam com 20 pontos de vida, e perde quem
-                          chegar a 0 primeiro ou quando um jogador não tiver mais cartas para comprar.</p>
-                        <h4 for="player1">Digite abaixo o nome dos 2 jogadores:</h4>
-                        <input type="text" class="form-control" v-model="player1">
-                        <br>
-                        <input type="text" class="form-control" v-model="player2">
-                      </div>
-                    </div>
-                    <div class="row form-group">
-                      <div class="col-md-6">
-                        <h3 class="text-center">{{ player1 }}</h3>
-                      </div>
-                      <div class="col-md-2">
-                        <button class="btn btn-danger text-center" @click="reduceCounter1()">-</button>
-                      </div>
-                      <div class="col-md-2">
-                        <h3>{{ lifePlayer1 }}</h3>
-                      </div>
-                      <div class="col-md-2">
-                        <button class="btn btn-primary text-center" @click="addCounter1()">+</button>
-                      </div>
-                    </div>
-                    <div class="row form-group">
-                      <div class="col-md-6">
-                        <h3 class="text-center">{{ player2 }}</h3>
-                      </div>
-                      <div class="col-md-2">
-                        <button class="btn btn-danger text-center" @click="reduceCounter2()">-</button>
-                      </div>
-                      <div class="col-md-2">
-                        <h3>{{ lifePlayer2 }}</h3>
-                      </div>
-                      <div class="col-md-2">
-                        <button class="btn btn-primary text-center" @click="addCounter2()">+</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <p>Conheça também a versāo para android clicando <a href="https://play.google.com/store/apps/details?id=com.magecounter.paulocorazza.magecounter">aqui
-                        !</a>
-                    </p>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                  </div>
-                </div>
+      <div id="app">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card text-center" style="width: 20rem;background-color: #132645;color: white;">
+              <img class="card-img-top" src="./img/logo.png" alt="Card image cap">
+              <div class="card-body pgbr">
+                <p class="card-text">Proporcionar para comunidade de TI um espaço de compartilhamento de conhecimento,
+                  experiencias e
+                  aprendizado.
+                </p>
+                <a href="http://www.programadoresbr.com.br" class="btn btn-primary">ProgramadoresBR</a>
               </div>
             </div>
           </div>
 
+          <div class="col-md-6">
+            <div class="card text-center" style="width:20rem; background-color: #42b883; color: white;">
+              <div class="card-body">
+                <h5 class="card-title">A magia do Vue.js</h5>
+                <p class="card-text">Um Contador usando vue.js para contabilizar os pontos de vida durante uma
+                  partida de Magic:The gathering</p>
+                <button class="btn btn-warning" @click="showModal()">Usar o Contador!</button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card text-center" style="width:20rem; background-color: #42b883; color: white;">
+              <div class="card-body">
+                <h5 class="card-title">A magia do Vue.js</h5>
+                <p class="card-text">Um conversor monetário usando</p>
+                <button class="btn btn-warning" @click="showModalCurrency()">Usar o Contador!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title text-center" id="modalH5">Contador de Vida</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row form-group">
+
+                  <div class="col-md-12">
+                    <p>Numa partida de Magic de gathering, os jogadores começam com 20 pontos de vida, e perde quem
+                      chegar a 0 primeiro ou quando um jogador não tiver mais cartas para comprar.</p>
+                    <h4 for="player1">Digite abaixo o nome dos 2 jogadores:</h4>
+                    <input type="text" class="form-control" v-model="player1">
+                    <br>
+                    <input type="text" class="form-control" v-model="player2">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-6">
+                    <h3 class="text-center">{{ player1 }}</h3>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-danger text-center" @click="reduceCounter1()">-</button>
+                  </div>
+                  <div class="col-md-2">
+                    <h3>{{ lifePlayer1 }}</h3>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-primary text-center" @click="addCounter1()">+</button>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-6">
+                    <h3 class="text-center">{{ player2 }}</h3>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-danger text-center" @click="reduceCounter2()">-</button>
+                  </div>
+                  <div class="col-md-2">
+                    <h3>{{ lifePlayer2 }}</h3>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-primary text-center" @click="addCounter2()">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <p>Conheça também a versāo para android clicando <a href="https://play.google.com/store/apps/details?id=com.magecounter.paulocorazza.magecounter">aqui
+                    !</a>
+                </p>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+          aria-hidden="true" id="modalCurrency">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title text-center" id="modalH5">Conversor Monetario</h4>
+                </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ currency1 }} para {{ currency2 }}</h5>                            <input type="text" class="form-control text-center" v-model="currency1_value" v-bind:placeholder="currency1">
+                            <br>
+                            <div class="row">
+                              <div class="col-md-12">
+                                  <button class="btn btn-primary btn-block" onclick="converter()">Converter</button>
+                                  <h2 class="text-center"> {{ currency2_value }}</h2>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
 
       </div>
+
     </section>
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="apps">
@@ -508,7 +553,8 @@
             <div class="card-body">
               <h5 class="card-title">Alcool ou Gasosa ?</h5>
               <p class="card-text">Utilitário para lhe auxiliar na hora de abastecer o seu carro.</p>
-              <a href="https://play.google.com/store/apps/details?id=alcoolougasosa.paulocorazza.com.alcoolougasosa" class="btn btn-primary" >Baixe já o Alcool ou Gasoa !</a>
+              <a href="https://play.google.com/store/apps/details?id=alcoolougasosa.paulocorazza.com.alcoolougasosa"
+                class="btn btn-primary">Baixe já o Alcool ou Gasoa !</a>
             </div>
           </div>
         </div>
@@ -563,48 +609,48 @@
   </div>
   </section>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
-      <h2 class="container col-sm-12 text-center">Contato</h2>
+    <h2 class="container col-sm-12 text-center">Contato</h2>
     <div class="row">
       <div class="col-md-12">
-          <form action="https://formspree.io/corazza.paulovinicius@gmail.com" method="POST"  id="contactForm">
-            <div class="row">
-                <div class="col-md-4">
-                  <h5><label for="name"><span class="required">*</span> Nome</label></h5>
-                  <input type="text" name="name" class="form-control" placeholder="Digite seu nome" id="name" required ="Por favor, digite seu nome.">
-                </div>
-                <div class="col-md-4">
-                    <h5><label><span class="required">*</span> Email</label></h5>
-                    <input type="email" class="form-control" required name="email" placeholder="seuemail@provedor.com">
-                </div>
-                <div class="col-md-4">
-                  <h5><label for="phone">Telefone</label></h5>
-                  <input type="text" class="form-control"  name="phone" placeholder="xx xx xxxxx-xxxx">
-                </div>
+        <form action="https://formspree.io/corazza.paulovinicius@gmail.com" method="POST" id="contactForm">
+          <div class="row">
+            <div class="col-md-4">
+              <h5><label for="name"><span class="required">*</span> Nome</label></h5>
+              <input type="text" name="name" class="form-control" placeholder="Digite seu nome" id="name" required="Por favor, digite seu nome.">
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-12">
-                <h5><label for="message"><span class="required">*</span> Digite sua mensagem</label> </h5>
-                <textarea class="form-control" name="message" required rows="5" placeholder="Digite aqui sua mensagem, pode ser um elogio, me convidar para tomar um café ou até mesmo um emprego :)"></textarea>
-              </div>
+            <div class="col-md-4">
+              <h5><label><span class="required">*</span> Email</label></h5>
+              <input type="email" class="form-control" required name="email" placeholder="seuemail@provedor.com">
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-primary text-center">Enviar</button>
-              </div>
+            <div class="col-md-4">
+              <h5><label for="phone">Telefone</label></h5>
+              <input type="text" class="form-control" name="phone" placeholder="xx xx xxxxx-xxxx">
             </div>
-            <br>
-            <div class="row">
-              <div class="col-md-12">
-                <span>* Campos Obrigatórios</span>
-              </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <h5><label for="message"><span class="required">*</span> Digite sua mensagem</label> </h5>
+              <textarea class="form-control" name="message" required rows="5" placeholder="Digite aqui sua mensagem, pode ser um elogio, me convidar para tomar um café ou até mesmo um emprego :)"></textarea>
             </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary text-center">Enviar</button>
             </div>
-          </form>
-
-
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <span>* Campos Obrigatórios</span>
+            </div>
+          </div>
       </div>
+      </form>
+
+
+    </div>
     </div>
   </section>
   </div>
@@ -628,20 +674,22 @@
 
     }
   </script>
+  
   <script>
+
     const app = new Vue({
+
+  
       el: '#app',
-
+      props: ["currency1", "currency2"],
       data: {
-
-
 
         player1: '',
         player2: '',
         lifePlayer1: 20,
-        lifePlayer2: 20
-
-
+        lifePlayer2: 20,
+        // currency1: '',
+        // currency2: 0
 
       },
 
@@ -687,10 +735,12 @@
           this.lifePlayer1 = 20;
           this.lifePlayer2 = 20
         },
-
         showModal() {
           $('#modal').modal('show');
-        }
+        },
+        // showModalCurrency() {
+        //   $('#modalCurrency').modal('show');
+        // }
 
       },
       computed: {
@@ -707,12 +757,11 @@
 
   <script>
     $("#contactForm").validate();
-  
   </script>
   <!-- Custom scripts for this template -->
 
   <script src="js/resume.min.js"></script>
- 
+
 </body>
 
 </html>
