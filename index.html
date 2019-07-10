@@ -441,18 +441,19 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="row">
-          <div class="col-md-6">
-            <div class="card text-center" style="width:20rem; background-color: #42b883; color: white;">
-              <div class="card-body">
-                <h5 class="card-title">A magia do Vue.js</h5>
-                <p class="card-text">Um conversor monetário usando</p>
-                <button class="btn btn-warning" @click="showModalCurrency()">Usar o Contador!</button>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="card text-center" style="width:20rem;">
+                  <img class="card-img-top" src="./img/logo 2.png" alt="Carmel">
+                  <div class="card-body">
+                    <h5 class="card-title">Carmel Indústria e Comércio de Produtos para Higiene e Limpeza LTDA</h5>
+                    <p class="card-text">A Carmel é uma empresa especializada na fabricaçāo de lenços umidecidos, localizada em Cabreúva-SP.</p>
+                    <a href="https://www.carmel.ind.br" class="btn btn-primary">Carmel Indústria e Comércio</a>
+                  </div>
+                </div>
           </div>
-        </div> -->
+         
+        </div>
 
         <div class="modal" id="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
@@ -467,9 +468,9 @@
                     <p>Numa partida de Magic de gathering, os jogadores começam com 20 pontos de vida, e perde quem
                       chegar a 0 primeiro ou quando um jogador não tiver mais cartas para comprar.</p>
                     <h4 for="player1">Digite abaixo o nome dos 2 jogadores:</h4>
-                    <input type="text" class="form-control" v-model="player1">
+                    <input type="text" class="form-control" v-model="player1" placeholder="Digite o nome do Jogador 1">
                     <br>
-                    <input type="text" class="form-control" v-model="player2">
+                    <input type="text" class="form-control" v-model="player2" placeholder="Digite o nome do Jogador 2">
                   </div>
                 </div>
                 <div class="row form-group">
@@ -480,7 +481,7 @@
                     <button class="btn btn-danger text-center" @click="reduceCounter1()">-</button>
                   </div>
                   <div class="col-md-2">
-                    <h3>{{ lifePlayer1 }}</h3>
+                    <h3 class="text-center">{{ lifePlayer1 }}</h3>
                   </div>
                   <div class="col-md-2">
                     <button class="btn btn-primary text-center" @click="addCounter1()">+</button>
@@ -494,7 +495,7 @@
                     <button class="btn btn-danger text-center" @click="reduceCounter2()">-</button>
                   </div>
                   <div class="col-md-2">
-                    <h3>{{ lifePlayer2 }}</h3>
+                    <h3 class="text-center">{{ lifePlayer2 }}</h3>
                   </div>
                   <div class="col-md-2">
                     <button class="btn btn-primary text-center" @click="addCounter2()">+</button>
