@@ -193,7 +193,7 @@
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Analista de TI</h3>
             <div class="subheading mb-3"><a href="https://innovareti.com.br/">Carmel Indústria e comércio de produtos de higiene e limpeza LTDA</a></div>
-            <p>Na Carmel sou responsável pelo departamento de Tecnologia da Informaçāo, desde a parte de Gestāo à operação, sempre procurando usar as boas práticas do mercado.</p>
+            <p>Na Carmel sou responsável pelo departamento de Tecnologia da Informaçāo, desde a parte de Gestāo à operação. Presto suporte aos usuários para o uso de computadores, administro a rede interna, faço manutençāo de computadores e até programei o site da empresa.</p>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">Março de 2019 - Atual emprego</span>
@@ -441,6 +441,7 @@
             </div>
           </div>
         </div>
+        <br>
         <div class="row">
           <div class="col-md-12">
               <div class="card text-center" style="width:20rem;">
@@ -448,13 +449,14 @@
                   <div class="card-body">
                     <h5 class="card-title">Carmel Indústria e Comércio de Produtos para Higiene e Limpeza LTDA</h5>
                     <p class="card-text">A Carmel é uma empresa especializada na fabricaçāo de lenços umidecidos, localizada em Cabreúva-SP.</p>
-                    <a href="carmel.ind.br" class="btn btn-primary">Carmel Indústria e Comércio</a>
+                    <a href="www.carmel.ind.br" class="btn btn-primary">Carmel Indústria e Comércio</a>
                   </div>
                 </div>
           </div>
          
         </div>
 
+       
         <div class="modal" id="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -660,6 +662,8 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/resume.min.js"></script>
   <script src="vendor/jquery-validation-1.17.0/dist/jquery.validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
 
 
   <script>
@@ -668,7 +672,13 @@
       var name = "Paulo Corazza";
       var job = "Programador";
 
-      alert("Olá eu sou o " + name + " e  sou um " + job);
+      Swal.fire({
+        title: 'Olá, obrigado por estar visitando a minha página  !',
+        text: 'Olá, eu sou o ' + name + 'e sou um ' + job,
+        type: 'info',
+        confirmButtonText: 'Agora vou deixar voceê me conhecer um pouco mais !'
+      })
+
 
     }
   </script>
