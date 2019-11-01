@@ -182,6 +182,34 @@ a:hover, a:focus, a:active {
 
 }
 
+.main{
+  margin-left: 35px;
+}
+
+.world{
+  margin-left: 45px;
+}
+
+.hello{
+  margin-left: 45px;
+}
+
+.bracket1{
+  margin-left: 55px;
+}
+
+.bracket2{
+  margin-left: 45px;
+}
+
+.bracket3{
+  margin-left: 25px;
+}
+
+.class{
+  margin-left: 25px;
+}
+
 .card-title{
 
   text-align: center;

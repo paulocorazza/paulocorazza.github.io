@@ -32,7 +32,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Paulo Corazza</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/me.png" alt="">
+        <img class="img-fluid img-profile rounded-circle" src="img/me2.png" alt="Paulo Corazza">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -46,9 +46,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#about">Sobre Mim</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="./blog.html">Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#experience">Experiência</a>
@@ -99,11 +96,20 @@
           Clube, Não necessariamente nessa ordem, exceto o Café por que se não fosse o café você não estaria vendo
           minha bio agora.</p>
         <div class="jumbotron">
-          <input style="width: 100%" type="text" readonly id="data_nascimento" value="23/09/1992" hidden />
           <h1 class="display-4">Hello, world!</h1>
-          <p class="var">var name = 'Paulo Corazza'</p>
-          <p class="var1">var job = 'Programador'</p>
-          <p>alert ("Eu sou o ") + name + ("e sou um " + job);</p>
+          <p class="var">import java.awt.*;</p>
+          <p class="var">import java.swing.*;</p>
+          <p class="var">import javax.swing.JOptionPane;</p>
+          <p class="class">Class HelloWorld {</p>
+          <p class="main">public static void main(String args[]) {</p>
+          <p class="hello">public void helloworld () {</p>
+          <p class="world">JOptionPane.showMessageDialog(null, "Olá, eu sou o Paulo Corazza e sou um programador !");</p>
+          <p class="bracket1">}</p>
+          <p class="hello">private void btnHelloWorldActionPerformed(java.awt.event.ActionEvent evt) {</p>
+          <p class="world">helloWorld();</p>
+          <p class="bracket2">}</p>
+          <p class="bracket3">}</p>
+          <p class="bracket">}</p>
           <button class="btn btn-danger" onclick="helloWorld()">Clique Aqui !</button>
         </div>
         <ul class="list-inline list-social-icons mb-0">
@@ -199,14 +205,10 @@
             <h3 class="mb-0">Analista de TI</h3>
             <div class="subheading mb-3"><a href="http://www.carmel.ind.br">Carmel Indústria e comércio de produtos de
                 higiene e limpeza LTDA</a></div>
-            <p>Na Carmel sou responsável pelo departamento de Tecnologia da Informaçāo, desde a parte de Gestāo à
-              operação. Presto suporte aos usuários para o uso de computadores, administro a rede interna, faço
-              manutençāo de computadores e até programei o site da empresa.
-              Desenvolvi também um sistema em java com banco de dados mysql para emissāo de ordens de serviços.
-            </p>
+            <p>Na Carmel fui responsável pelo departamento de Tecnologia da Informaçāo, desde a parte de Gestāo à operação. Prestei suporte aos usuários para o uso de computadores, administrei a rede interna, fazia amanutençāo de computadores e até programei o site da empresa. Desenvolvi também um sistema em java com banco de dados mysql para emissāo de ordens de serviços.</p>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">Março de 2019 - Atual emprego</span>
+            <span class="text-primary">Março de 2019 - Outubro de 2019</span>
           </div>
         </div>
 
@@ -306,7 +308,7 @@
           </div>
         </div>
 
-        
+
 
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
@@ -589,7 +591,7 @@
           </div>
         </div>
 
-       
+
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -608,7 +610,8 @@
             <div class="card-body">
               <h5 class="card-title">Sistema em Java e MySql com Impressāo de Relatórios</h5>
               <p class="card-text">Sistema para emissāo de ordens de Serviços</p>
-              <button class="btn btn-primary">Tem Interesse ? Entre em contato !<a class="nav-link js-scroll-trigger" href="#contact"></a></button>
+              <button class="btn btn-primary">Tem Interesse ? Entre em contato !<a class="nav-link js-scroll-trigger"
+                  href="#contact"></a></button>
             </div>
           </div>
         </div>
@@ -766,7 +769,7 @@
       var job = "Programador";
 
       Swal.fire({
-        title: 'Olá, obrigado por estar visitando a minha página !',
+        //title: 'Olá, obrigado por estar visitando a minha página !',
         text: 'Eu sou o ' + name + ' e sou um ' + job,
         type: 'info',
         confirmButtonText: 'Agora vou deixar você me conhecer um pouco mais !'
@@ -794,15 +797,11 @@
         reduceCounter1() {
 
           this.lifePlayer1--
-
           if (this.lifePlayer1 == 0) {
 
             alert('O' + this.player1 + "perdeu !");
-
           }
-
         },
-
         addCounter1() {
 
           this.lifePlayer1++
@@ -816,28 +815,16 @@
 
             alert('O' + this.player2 + "perdeu !");
           }
-
-
-
         },
-
         addCounter2() {
 
           this.lifePlayer2++
 
         },
-
-        reset() {
-          this.lifePlayer1 = 20;
-          this.lifePlayer2 = 20
-        },
         showModal() {
           $('#modal').modal('show');
         },
-
-
       },
-
     })
   </script>
 
