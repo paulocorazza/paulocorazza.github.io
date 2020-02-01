@@ -5,6 +5,7 @@ body {
   height: 100%;
 }
 
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
@@ -165,9 +166,15 @@ a:hover, a:focus, a:active {
   color: #0077b5 ;
 }
 
-.carrosel{
-  font-size: 20px;
-  color: black;
+.wrapper{
+  width:100%;
+  padding-top: 20px;
+  text-align:center;
+}
+
+.carousel{
+  width:5%;
+  margin:0px auto;
 }
 
 .card{
