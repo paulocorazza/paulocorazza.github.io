@@ -19,8 +19,8 @@ data: {
   player2: '',
   lifePlayer1: 20,
   lifePlayer2: 20,
-  url: 'paulocorazza.github.io',
-  urlEnglish: 'paulocorazza.github.io/english.html'
+  url: 'https://paulocorazza.github.io',
+  urlEnglish: 'https://paulocorazza.github.io/english.html'
  
 
 },
