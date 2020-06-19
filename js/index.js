@@ -19,8 +19,8 @@ player1: '',
 player2: '',
 lifePlayer1: 20,
 lifePlayer2: 20,
-url: 'http://127.0.0.1:5500/',
-urlEnglish: 'http://127.0.0.1:5500/english.html'
+//url: 'http://127.0.0.1:5500/',
+//urlEnglish: 'http://127.0.0.1:5500/english.html'
 
 
 },
@@ -31,7 +31,7 @@ reduceCounter1() {
 
   this.lifePlayer1--
 
-  if (this.lifePlayer1 === 0 && window.location.href === this.url) {
+  if (this.lifePlayer1 === 0 ) {
 
     Swal.fire({
         text: 'O jogador ' + this.player1 + ' perdeu !',
@@ -46,7 +46,7 @@ reduceCounter1() {
 
   //this.lifePlayer1 = 20
 
-  if(this.lifePlayer1 === 0 && window.location.href === this.urlEnglish){
+  if(this.lifePlayer1 === 0 ){
     Swal.fire({
       text: 'The player ' + this.player1 + ' has lost the match  !',
       type: 'danger',
@@ -67,7 +67,7 @@ reduceCounter2() {
 
   this.lifePlayer2--
 
-  if (this.lifePlayer2 === 0 && window.location.href === this.url) {
+  if (this.lifePlayer2 === 0 ) {
 
     Swal.fire({
         text: 'O jogador ' + this.player2 + ' perdeu !',
@@ -82,7 +82,7 @@ reduceCounter2() {
 
   //this.lifePlayer2 = 20
 
-  if(this.lifePlayer2 === 0 && window.location.href === this.urlEnglish){
+  if(this.lifePlayer2 === 0 ){
     Swal.fire({
       text: 'The player ' + this.player2 + ' lost the match  !',
       type: 'danger',
