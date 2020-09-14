@@ -12,117 +12,112 @@ function helloWorld() {
 }
 const app = new Vue({
 
-el: '#app',
-data: {
+  el: '#app',
+  data: {
 
-player1: '',
-player2: '',
-lifePlayer1: 20,
-lifePlayer2: 20,
-//url: 'http://127.0.0.1:5500/',
-//urlEnglish: 'http://127.0.0.1:5500/english.html'
+    player1: '',
+    player2: '',
+    lifePlayer1: 20,
+    lifePlayer2: 20,
+  },
 
+  methods: {
 
-},
+    reduceCounter1() {
 
-methods: {
+      this.lifePlayer1--
 
-reduceCounter1() {
+      if (this.lifePlayer1 === 0) {
 
-  this.lifePlayer1--
+        Swal.fire({
+            text: 'O jogador ' + this.player1 + ' perdeu !',
+            type: 'danger',
+            imageUrl: './img/game_over.png',
+            imageWidth: 250,
+            imageHeight: 250,
+            confirmButtonText: 'Voltar'
+          },
+          this.lifePlayer1 = 20)
+      }
 
-  if (this.lifePlayer1 === 0 ) {
+      //this.lifePlayer1 = 20
 
-    Swal.fire({
-        text: 'O jogador ' + this.player1 + ' perdeu !',
-        type: 'danger',
-        imageUrl: './img/game_over.png',
-        imageWidth: 250,
-        imageHeight: 250,
-        confirmButtonText: 'Voltar'
-      },
-      this.lifePlayer1 = 20)
-  }
-
-  //this.lifePlayer1 = 20
-
-  if(this.lifePlayer1 === 0 ){
-    Swal.fire({
-      text: 'The player ' + this.player1 + ' has lost the match  !',
-      type: 'danger',
-      imageUrl: './img/game_over.png',
-      imageWidth: 250,
-      imageHeight: 250,
-      confirmButtonText: 'back'
+      if (this.lifePlayer1 === 0) {
+        Swal.fire({
+            text: 'The player ' + this.player1 + ' has lost the match  !',
+            type: 'danger',
+            imageUrl: './img/game_over.png',
+            imageWidth: 250,
+            imageHeight: 250,
+            confirmButtonText: 'back'
+          },
+          this.lifePlayer1 = 20)
+      }
     },
-    this.lifePlayer1 = 20)
-  }
-},
-addCounter1() {
+    addCounter1() {
 
-  this.lifePlayer1++
+      this.lifePlayer1++
 
-},
-reduceCounter2() {
-
-  this.lifePlayer2--
-
-  if (this.lifePlayer2 === 0 ) {
-
-    Swal.fire({
-        text: 'O jogador ' + this.player2 + ' perdeu !',
-        type: 'danger',
-        imageUrl: './img/game_over.png',
-        imageWidth: 250,
-        imageHeight: 250,
-        confirmButtonText: 'Voltar'
-      },
-      this.lifePlayer2 = 20)
-  }
-
-  //this.lifePlayer2 = 20
-
-  if(this.lifePlayer2 === 0 ){
-    Swal.fire({
-      text: 'The player ' + this.player2 + ' lost the match  !',
-      type: 'danger',
-      imageUrl: './img/game_over.png',
-      imageWidth: 250,
-      imageHeight: 250,
-      confirmButtonText: 'back'
     },
-    this.lifePlayer2 = 20)
-  }
-},
-addCounter2() {
+    reduceCounter2() {
 
-  this.lifePlayer2++
+      this.lifePlayer2--
 
-},
-showModal() {
-  $('#modal').modal('show');
-},
-},
+      if (this.lifePlayer2 === 0) {
+
+        Swal.fire({
+            text: 'O jogador ' + this.player2 + ' perdeu !',
+            type: 'danger',
+            imageUrl: './img/game_over.png',
+            imageWidth: 250,
+            imageHeight: 250,
+            confirmButtonText: 'Voltar'
+          },
+          this.lifePlayer2 = 20)
+      }
+
+      //this.lifePlayer2 = 20
+
+      if (this.lifePlayer2 === 0) {
+        Swal.fire({
+            text: 'The player ' + this.player2 + ' lost the match  !',
+            type: 'danger',
+            imageUrl: './img/game_over.png',
+            imageWidth: 250,
+            imageHeight: 250,
+            confirmButtonText: 'back'
+          },
+          this.lifePlayer2 = 20)
+      }
+    },
+    addCounter2() {
+
+      this.lifePlayer2++
+
+    },
+    showModal() {
+      $('#modal').modal('show');
+    },
+  },
 
 })
 $("#contactForm").validate();
 
 var button = document.getElementById("top");
 
-window.onscroll = function(){
+window.onscroll = function () {
   scrollFunction()
 };
 
-function scrollFunction(){
-  if(document.body.scrollTop < 20 || document.documentElement.scrollTop > 20){
+function scrollFunction() {
+  if (document.body.scrollTop < 20 || document.documentElement.scrollTop > 20) {
     button.style.display = "block";
-  }
-  else{
+  } else {
     button.style.display = "none";
   }
 }
 
-function toTheTop(){
+function toTheTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
