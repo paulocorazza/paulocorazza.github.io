@@ -16,25 +16,28 @@
 </head>
 
 <body data-theme="nerd">
-  <section>
-    <article>
-      <pre id="output">
+  <div class="container">
+    <section>
+      <article>
+        <pre id="output">
+  
+           <strong>user@user $ welcome</strong> 
+  
+           
+            Here's @paulocorazza's terminal. Version 1.0 - Compilation 2021-05-27 23:00 GMT -3 -  Type "help" if you're lost.
+  
+          </pre>
+      </article>
+      <article class="terminal">
+        <div class="terminal__command" data-hidden="false" id="inputField">
+          $ ~/
+  
+          <input type="text" class="terminal__input" id="input" />
+        </div>
+      </article>
+    </section>
+  </div>
 
-          user@user $ welcome
-
-
-          Here's @paulocorazza's terminal. Version 1.0 - Compilation 2021-05-27 23:00 GMT -3 -  Type "help" if you're lost.
-
-        </pre>
-    </article>
-    <article class="terminal">
-      <div class="terminal__command" data-hidden="false" id="inputField">
-        $ ~/
-
-        <input type="text" class="terminal__input" id="input" />
-      </div>
-    </article>
-  </section>
   <script src="/index.js"></script>
 
 
