@@ -16,6 +16,13 @@ $(document).ready(function () {
 			{ url: 'assets/img/projects/gatherer2.png', caption: 'Detalhes de um card' },                
         ]);
     });
+
+    $('#gallery2').on('click', function (event) {
+        event.preventDefault();
+        Fresco.show([
+            { url: 'assets/img/projects/laravel-gatherer.png', caption: 'Listagem' },			     
+        ]);
+    });
 	
     //Set active tab on navbar
     $(window).scroll(function () {
